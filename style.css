@@ -5,6 +5,10 @@
   --blue-box: #2c66c3; /* light-blue panels */
   --blue-box-light: #3b78d6;
   --blue-outline: #6ea0ff;
+  --font-color: #282727;
+  --brand-shift: #745771;
+  --brand-shift-dark: #745771;
+
 
   --space-1: 4px;
   --space-2: 8px;
@@ -48,35 +52,50 @@ body {
   display: grid;
   place-items: center;
   padding-block: var(--space-6);
+  gap: var(--space-2);
 }
 .topbar img {
   width: clamp(189px, 54vw, 243px);
   height: auto;
 }
+.topbar__text {
+  font-size: clamp(10px, 2.5vw, 12px);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--font-color);
+  margin: 0;
+}
 
 .ribbon {
   display: grid;
   place-items: center;
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-5);
 }
 .ribbon__box {
-  background: #2e64b8;
+  background: linear-gradient(to right, #745771, #594256);
   color: #ffffff;
   padding: 12px 18px;
-  border-radius: 2px;
+  border-radius: 3px;
   font-weight: 700;
   width: 100%;
-  text-align: center;
-  margin-bottom: 2rem;
+  text-align: left;
   text-transform: uppercase;
-
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: clamp(18px, 4.8vw, 22px);
+}
+.ribbon__icon {
+  height: 24px;
+  width: auto;
 }
 
 .hero {
   text-align: center;
 }
 .hero__kh {
-  font-family: "Koulen", system-ui;
+  font-family: "Kantumruy Pro", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   font-size: clamp(21px, 6.3vw, 28px);
   color: var(--gold);
   font-weight: 800;
@@ -119,7 +138,7 @@ body {
 }
 
 .section__kh {
-  font-family: "Koulen", system-ui;
+  font-family: "Kantumruy Pro", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   font-size: clamp(20px, 6vw, 26px);
   margin: 0 0 var(--space-4);
   color: #133588;
@@ -127,7 +146,7 @@ body {
 
 .card { 
   background: #1E4E9C;
-  border-radius: 2px; 
+  border-radius: 3px; 
   padding: var(--space-5); 
   color: #ffffff;
   /* border: 1px solid var(--blue-outline);  */
@@ -166,7 +185,7 @@ body {
 .callout {
   background: #2d6cb4;
   margin-top: var(--space-6);
-  border-radius: 2px;
+  border-radius: 3px;
   padding: var(--space-5);
   color: #ffffff;
 }
@@ -231,7 +250,7 @@ h1, h2 {
 
 .note {
   padding: 1rem;
-  border-radius: 2px;
+  border-radius: 3px;
   background: lightgrey;
   color: #1f2937;
 }
@@ -250,4 +269,890 @@ h1, h2 {
 
 p {
   margin-top: 0.5rem
+}
+
+/* SHIFT Page Styles */
+
+/* Main Khmer headline */
+.shift-headline {
+  margin: var(--space-6) 0;
+  text-align: center;
+}
+.shift-headline__title {
+  font-family: "Kantumruy Pro", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(16px, 4.5vw, 20px);
+  font-weight: 600;
+  color: var(--brand-shift);
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Product images row */
+.product-images {
+  margin: var(--space-6) 0;
+}
+.product-images__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: var(--space-6) 0;
+  border: 1px solid var(--brand-shift);
+  border-radius: 3px;
+}
+.product-images__img {
+  height: auto;
+  max-width: 100%;
+  width: 65%;
+  max-width: 240px;
+}
+
+/* Feature cards */
+.feature-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  margin: var(--space-6) 0;
+}
+.feature-card {
+  background: linear-gradient(to right, #745771, #594256);
+  border-radius: 3px;
+  padding: var(--space-4);
+  color: #ffffff;
+  position: relative;
+  min-height: 120px;
+  display: flex;
+  align-items: flex-start;
+}
+.feature-card__text {
+  font-family: "Kantumruy Pro", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(12px, 3.2vw, 14px);
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0;
+  color: #ffffff;
+}
+.feature-card--with-icon {
+  align-items: flex-start;
+}
+.feature-card__icon {
+  position: absolute;
+  bottom: var(--space-3);
+  right: var(--space-3);
+  width: 32px;
+  height: 32px;
+  opacity: 0.9;
+}
+
+/* Body section */
+.shift-body {
+  margin: var(--space-6) 0;
+}
+.shift-body__paragraph {
+  font-family: "Kantumruy Pro", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(14px, 3.8vw, 16px);
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--font-color);
+  margin: 0 0 var(--space-6);
+  text-align: left;
+}
+.shift-checklist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-4);
+}
+.shift-checklist li {
+  display: grid;
+  grid-template-columns: 16px 1fr;
+  align-items: start;
+  gap: var(--space-3);
+}
+.shift-checklist__check {
+  width: 14px;
+  height: 14px;
+  display: block;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.shift-checklist span {
+  font-family: "Kantumruy Pro", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(13px, 3.5vw, 15px);
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--font-color);
+}
+
+/* Light gray info box */
+.usage-info {
+  background: rgba(116, 87, 113, 0.1);
+  border-radius: 3px;
+  padding: var(--space-5);
+  margin: var(--space-6) 0;
+}
+.usage-info__intro {
+  font-family: "Kantumruy Pro", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(14px, 3.8vw, 16px);
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--font-color);
+  margin: 0 0 var(--space-4);
+}
+.usage-info__item {
+  margin-bottom: var(--space-4);
+}
+.usage-info__label {
+  font-family: "Kantumruy Pro", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(13px, 3.5vw, 15px);
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--font-color);
+  margin: 0;
+}
+.usage-info__label strong {
+  font-weight: 700;
+}
+.usage-info__paragraph {
+  font-family: "Kantumruy Pro", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(13px, 3.5vw, 15px);
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--font-color);
+  margin: var(--space-4) 0 0;
+}
+
+/* PRODUCT INFORMATION block */
+.product-info {
+  background: #f5f5f5;
+  border-radius: 3px;
+  padding: 0;
+  margin: var(--space-6) 0;
+  color: var(--font-color);
+  overflow: hidden;
+}
+.product-info__bar {
+  background: var(--brand-shift);
+  height: 4px;
+  width: 100%;
+}
+.product-info__bar:first-child {
+  height: 8px;
+}
+.product-info__bar:last-child {
+  margin-top: var(--space-5);
+}
+.product-info__title {
+  font-family: "Manrope", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(16px, 4.2vw, 18px);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--font-color);
+  margin: var(--space-4) var(--space-5) var(--space-4);
+  letter-spacing: 0.02em;
+}
+.product-info__subtitle {
+  font-family: "Manrope", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(15px, 4vw, 17px);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--font-color);
+  margin: var(--space-5) var(--space-5) var(--space-4);
+  letter-spacing: 0.02em;
+}
+.product-info__row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: var(--space-2);
+  align-items: baseline;
+  margin-bottom: var(--space-2);
+  padding: 0 var(--space-5);
+}
+.product-info__label {
+  font-family: "Manrope", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(11px, 2.9vw, 13px);
+  font-weight: 600;
+  color: var(--font-color);
+  line-height: 1.3;
+}
+.product-info__dots {
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+  min-width: 20px;
+  align-self: flex-end;
+  margin-bottom: 4px;
+}
+.product-info__value {
+  font-family: "Manrope", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(11px, 2.9vw, 13px);
+  font-weight: 500;
+  color: var(--font-color);
+  text-align: right;
+  line-height: 1.3;
+}
+
+/* Footer blue panel */
+.shift-footer {
+  background: #274AA3;
+  border-radius: 3px;
+  padding: var(--space-5);
+  margin: var(--space-6) 0 0;
+  color: #ffffff;
+}
+.shift-footer__title {
+  font-family: "Manrope", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(10.5px, 2.8vw, 11.9px);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0 0 var(--space-3);
+  letter-spacing: 0.02em;
+}
+.shift-footer__text {
+  font-family: "Manrope", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(8.4px, 2.24vw, 9.8px);
+  font-weight: 500;
+  line-height: 1.6;
+  color: #ffffff;
+  margin: 0 0 var(--space-3);
+}
+.shift-footer__distributor {
+  font-family: "Manrope", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(9.1px, 2.45vw, 10.5px);
+  font-weight: 700;
+  color: #ffffff;
+  margin: var(--space-3) 0 0;
+}
+
+/* Landing Page Navigation */
+.landing-navigation {
+  margin: var(--space-8) 0;
+  text-align: center;
+}
+
+.landing-navigation__title {
+  font-family: "Kantumruy Pro", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(20px, 5.5vw, 24px);
+  font-weight: 700;
+  color: var(--brand-shift);
+  margin: 0 0 var(--space-6);
+}
+
+.landing-navigation__buttons {
+  display: grid;
+  gap: var(--space-5);
+  margin-top: var(--space-6);
+}
+
+.landing-button {
+  display: block;
+  text-decoration: none;
+  background: linear-gradient(to right, #745771, #594256);
+  border-radius: 3px;
+  padding: var(--space-6);
+  color: #ffffff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.landing-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(116, 87, 113, 0.3);
+}
+
+.landing-button__icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto var(--space-4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+.landing-button__icon img {
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) invert(1);
+}
+
+.landing-button__title {
+  font-family: "Kantumruy Pro", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(18px, 5vw, 22px);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 var(--space-2);
+}
+
+.landing-button__subtitle {
+  font-family: "Manrope", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(14px, 3.8vw, 16px);
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Education Page Styles */
+.education-section {
+  margin: var(--space-6) 0;
+}
+
+.education-section__title {
+  font-family: "Kantumruy Pro", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(18px, 5vw, 22px);
+  font-weight: 700;
+  color: #133588;
+  margin: 0 0 var(--space-3);
+  text-align: center;
+}
+
+.education-section__subtitle {
+  font-family: "Kantumruy Pro", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(16px, 4.5vw, 20px);
+  font-weight: 600;
+  color: #133588;
+  margin: 0 0 var(--space-5);
+  text-align: center;
+}
+
+.process-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  margin: var(--space-5) 0;
+  flex-wrap: wrap;
+}
+
+.process-flow__step {
+  font-family: "Kantumruy Pro", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(16px, 4.5vw, 20px);
+  font-weight: 700;
+  color: #2c66c3;
+  background: #e8f0fe;
+  padding: var(--space-3) var(--space-4);
+  border-radius: 3px;
+}
+
+.process-flow__arrow {
+  font-size: clamp(18px, 5vw, 22px);
+  color: #2c66c3;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.education-step {
+  margin: var(--space-6) 0;
+  text-align: center;
+}
+
+.education-step__icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-4);
+  position: relative;
+}
+
+.education-step__icon--blue {
+  background: #2c66c3;
+}
+
+.education-step__number {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  font-family: "Manrope", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.education-step__symbol {
+  width: 40px;
+  height: 40px;
+  filter: brightness(0) invert(1);
+}
+
+.education-step__title {
+  font-family: "Kantumruy Pro", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(16px, 4.5vw, 20px);
+  font-weight: 700;
+  color: #133588;
+  margin: 0 0 var(--space-3);
+}
+
+.education-step__description {
+  font-family: "Kantumruy Pro", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(14px, 3.8vw, 16px);
+  font-weight: 500;
+  color: var(--font-color);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.hygiene-step {
+  border-radius: 3px;
+  padding: var(--space-5);
+  margin: var(--space-5) 0;
+}
+
+.hygiene-step--blue {
+  background: #e8f0fe;
+  border-left: 4px solid #2c66c3;
+}
+
+.hygiene-step--red {
+  background: #fee8e8;
+  border-left: 4px solid #dc2626;
+}
+
+.hygiene-step__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.hygiene-step__number {
+  font-family: "Manrope", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: #ffffff;
+  background: #2c66c3;
+  width: 40px;
+  height: 40px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.hygiene-step--red .hygiene-step__number {
+  background: #dc2626;
+}
+
+.hygiene-step__title {
+  font-family: "Kantumruy Pro", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(16px, 4.5vw, 20px);
+  font-weight: 700;
+  color: #133588;
+  margin: 0;
+}
+
+.hygiene-step__description {
+  font-family: "Kantumruy Pro", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(14px, 3.8vw, 16px);
+  font-weight: 500;
+  color: var(--font-color);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Education Intro Section */
+.education-intro {
+  margin: var(--space-6) 0;
+  text-align: center;
+}
+
+.education-intro__title {
+  font-family: "Kantumruy Pro", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(20px, 5.5vw, 24px);
+  font-weight: 700;
+  color: #133588;
+  margin: 0 0 var(--space-4);
+  line-height: 1.4;
+}
+
+.education-intro__paragraph {
+  font-family: "Kantumruy Pro", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(13px, 3.5vw, 15px);
+  font-weight: 500;
+  color: var(--font-color);
+  line-height: 1.6;
+  margin: 0 0 var(--space-5);
+  text-align: left;
+}
+
+.education-intro__subtitle {
+  font-family: "Kantumruy Pro", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(18px, 5vw, 22px);
+  font-weight: 700;
+  color: #133588;
+  margin: var(--space-6) 0 var(--space-4);
+  text-align: center;
+}
+
+/* Flow Bar */
+.flow-bar {
+  margin: var(--space-6) 0;
+  background: var(--blue-box);
+  border-radius: 3px;
+  padding: var(--space-4) var(--space-3);
+}
+
+.flow-bar--small {
+  background: transparent;
+  padding: var(--space-3) 0;
+}
+
+.flow-bar__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.flow-bar__step {
+  font-family: "Kantumruy Pro", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(14px, 3.8vw, 16px);
+  font-weight: 700;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.2);
+  padding: var(--space-2) var(--space-3);
+  border-radius: 3px;
+}
+
+.flow-bar--small .flow-bar__step {
+  background: #e8f0fe;
+  color: var(--blue-box);
+}
+
+.flow-bar__arrow {
+  font-size: clamp(16px, 4.5vw, 20px);
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.flow-bar--small .flow-bar__arrow {
+  color: var(--blue-box);
+}
+
+.flow-bar__arrow-down {
+  font-size: clamp(24px, 6.5vw, 32px);
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 1;
+  margin-left: var(--space-2);
+}
+
+.flow-bar--small .flow-bar__arrow-down {
+  color: var(--blue-box);
+}
+
+/* Principles Steps */
+.principles-steps {
+  margin: var(--space-6) 0;
+}
+
+.principle-card {
+  background: #ffffff;
+  border-radius: 3px;
+  padding: var(--space-5);
+  margin-bottom: var(--space-4);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.principle-card__icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #e8f0fe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-4);
+  position: relative;
+}
+
+.principle-card__badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  font-family: "Manrope", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: #ffffff;
+  background: var(--blue-box);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.principle-card__illustration {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.principle-card__icon-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.principle-card__title {
+  font-family: "Kantumruy Pro", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(16px, 4.5vw, 20px);
+  font-weight: 700;
+  color: #133588;
+  margin: 0 0 var(--space-3);
+  text-align: center;
+}
+
+.principle-card__text {
+  font-family: "Kantumruy Pro", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(13px, 3.5vw, 15px);
+  font-weight: 500;
+  color: var(--font-color);
+  line-height: 1.6;
+  margin: 0;
+  text-align: left;
+}
+
+.principle-card__arrow-down {
+  text-align: center;
+  font-size: clamp(28px, 7.5vw, 36px);
+  color: var(--blue-box);
+  font-weight: 700;
+  line-height: 1;
+  margin: var(--space-4) 0;
+}
+
+/* Education Process Section */
+.education-process {
+  margin: var(--space-8) 0 var(--space-6);
+}
+
+.education-process__title {
+  font-family: "Kantumruy Pro", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(20px, 5.5vw, 24px);
+  font-weight: 700;
+  color: #133588;
+  margin: 0 0 var(--space-4);
+  text-align: center;
+}
+
+/* Product Panels */
+.product-panels {
+  margin: var(--space-6) 0;
+}
+
+.product-panel {
+  background: #ffffff;
+  border-radius: 3px;
+  margin-bottom: var(--space-6);
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.product-panel__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+}
+
+.product-panel--purple .product-panel__header {
+  background: linear-gradient(to right, #745771, #594256);
+}
+
+.product-panel--red .product-panel__header {
+  background: #dc2626;
+}
+
+.product-panel__number {
+  font-family: "Manrope", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.2);
+  width: 48px;
+  height: 48px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.product-panel__title {
+  font-family: "Kantumruy Pro", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(16px, 4.5vw, 20px);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  flex: 1;
+}
+
+.product-panel__content {
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  align-items: start;
+}
+
+.product-panel__illustration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-panel__illustration-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.product-panel__text {
+  min-width: 0;
+}
+
+.product-panel__why {
+  font-family: "Kantumruy Pro", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(14px, 3.8vw, 16px);
+  font-weight: 700;
+  color: #133588;
+  margin: 0 0 var(--space-2);
+}
+
+.product-panel__description {
+  font-family: "Kantumruy Pro", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(12px, 3.2vw, 14px);
+  font-weight: 500;
+  color: var(--font-color);
+  line-height: 1.6;
+  margin: 0 0 var(--space-3);
+}
+
+.product-panel__bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-3);
+}
+
+.product-panel__bullets li {
+  font-family: "Kantumruy Pro", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(12px, 3.2vw, 14px);
+  font-weight: 500;
+  color: var(--font-color);
+  line-height: 1.6;
+  margin-bottom: var(--space-2);
+  padding-left: var(--space-4);
+  position: relative;
+}
+
+.product-panel__bullets li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--font-color);
+}
+
+.product-panel__product-label {
+  font-family: "Kantumruy Pro", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(12px, 3.2vw, 14px);
+  font-weight: 600;
+  color: var(--font-color);
+  margin-bottom: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.product-panel__product-label strong {
+  font-weight: 700;
+}
+
+.product-panel__result {
+  font-family: "Kantumruy Pro", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(12px, 3.2vw, 14px);
+  font-weight: 500;
+  color: var(--font-color);
+}
+
+.product-panel__result strong {
+  font-weight: 700;
+  display: block;
+  margin-bottom: var(--space-1);
+}
+
+.product-panel__result p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.product-panel__image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 100px;
+}
+
+.product-panel__image--multiple {
+  gap: var(--space-2);
+}
+
+.product-panel__product-img {
+  width: 80px;
+  height: auto;
+  max-height: 120px;
+  object-fit: contain;
+}
+
+.product-panel__footer {
+  height: 4px;
+  width: 100%;
+}
+
+.product-panel--purple .product-panel__footer {
+  background: linear-gradient(to right, #745771, #594256);
+}
+
+.product-panel--red .product-panel__footer {
+  background: #dc2626;
+}
+
+.product-panel__arrow-down {
+  text-align: right;
+  font-size: clamp(28px, 7.5vw, 36px);
+  color: var(--blue-box);
+  font-weight: 700;
+  line-height: 1;
+  margin: var(--space-3) var(--space-5) var(--space-4);
+  padding-right: var(--space-2);
+}
+
+/* Education Conclusion */
+.education-conclusion {
+  margin: var(--space-8) 0 var(--space-6);
+  padding: var(--space-5);
+  background: rgba(116, 87, 113, 0.1);
+  border-radius: 3px;
+}
+
+.education-conclusion__text {
+  font-family: "Kantumruy Pro", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(14px, 3.8vw, 16px);
+  font-weight: 600;
+  color: var(--font-color);
+  line-height: 1.6;
+  margin: 0;
+  text-align: center;
 }
